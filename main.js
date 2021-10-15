@@ -1,9 +1,11 @@
-const step = 95;
+var step = 50;
+var gas = 10;
 const keyLeft = 37;
 const keyUp = 38;
 const keyRight = 39;
 const keyDown = 40;
-
+const keyOne = 49; // tăng tốc
+const keyTwo = 50; // giảm
 function moveRight() {
 	// obj
     var man = document.getElementById('man');
@@ -104,6 +106,17 @@ function moveUp() {
     }
 }
 
+function moveFast() {
+        step += gas;
+    }
+
+function moveSlow() {
+        if((step - gas) > 0){
+          step -= gas;      
+        }else{
+          step = 1 ;
+        }
+    }
 
 function controllMan(event){
     switch(event.keyCode){
@@ -121,6 +134,14 @@ function controllMan(event){
         }
         case keyUp:{
             moveUp();
+            break;
+        }
+        case keyOne:{
+            moveFast();
+            break;
+        }
+        case keyTwo:{
+            moveSlow();
             break;
         }
 /*        default:{
