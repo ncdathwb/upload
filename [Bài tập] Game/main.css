@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  color: #333;
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+  user-select: none;
+}
+body {
+background: #6D9886;
+}
+
+/*.container:after {
+ content: '';
+ position: absolute;
+ top: 0;
+ right: 0;
+ width: 4px;
+ height: 20px;
+ background: #d34131;
+ border-radius: 5px;
+}*/
