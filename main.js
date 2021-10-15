@@ -108,13 +108,16 @@ function moveUp() {
 
 function moveFast() {
         step += gas;
+        console.log(`Hiện tại tốc độ đã tăng đến: ${step}`);
     }
 
 function moveSlow() {
         if((step - gas) > 0){
-          step -= gas;      
+          step -= gas;
+          console.log(`Hiện tại tốc độ đã giảm xuống còn: ${step}`);      
         }else{
           step = 1 ;
+          console.log(`Hiện tại tốc độ giảm đến mức tối thiểu: ${step}`);
         }
     }
 
